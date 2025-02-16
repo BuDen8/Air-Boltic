@@ -1,0 +1,11 @@
+air_boltic_dbt:
+  outputs:
+    prod:
+      catalog: 'catalog 1'
+      host: https://bolt.databricks.com #Or the actual host ideally as a variable to not expose sensitive data
+      http_path: "/sql/1.0/warehouses/databricks_raw_data" #Or the actual host ideally as a variable to not expose sensitive data
+      schema: air_boltic_schema
+      threads: 1
+      token: "{{ env_var('DATABRICKS_TOKEN') }}"
+      type: databricks
+  target: dev
