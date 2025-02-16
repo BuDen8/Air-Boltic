@@ -16,9 +16,6 @@ The repo consists of the following components:
 
 3. **LookML Configuration**  
    - Defines an **Explore** that connects Looker to the **final datamart** in dbt.  
-   - Includes measures such as:  
-     - `trip_duration_hours`: Sum of total trip duration.  
-     - `seat_utilization_percentage`: Percentage of occupied seats per trip.  
 
 4. **Raw Data Folder**  
    - Contains the provided CSV and JSON **sample data** used for development and testing.  
