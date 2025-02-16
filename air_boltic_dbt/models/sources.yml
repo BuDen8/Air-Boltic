@@ -1,0 +1,20 @@
+version: 2
+sources:
+  - name: aeroplane_csv_sources
+    description: "Raw CSV data from S3 stored as a Delta table"
+    tables:
+      - name: raw_air_boltic_aeroplane_data
+        description: "CSV Aeroplane Data from S3"
+      - name: raw_air_boltic_customer_data_
+        description: "CSV Customer Data from S3"
+      - name: raw_air_boltic_customer_group_data 
+        description: "CSV Customer Group Data from S3"
+      - name: raw_air_boltic_order_data 
+        description: "CSV Order Data from S3"
+      - name: raw_air_boltic_trip_data 
+        description: "CSV Trip Data from S3"
+  - name: aeroplane_json_sources
+    description: "Raw JSON data from S3 stored as a Delta table"
+    tables:
+      - name: air_boltic_aeroplane_model_data
+        description: "JSON Aeroplane Model Data from S3"
