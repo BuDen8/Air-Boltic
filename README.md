@@ -1,10 +1,28 @@
 # Air-Boltic
 
-The repo consists of the following components:
- 1.A dbt core project created using a dbt-databricks configuration 
- 2.A delta_tables_script.sql file that serves as an example of how Delta tables would be created in a Databricks Workspace using a made up S3 storage location where the raw data would be stored.
- 3.A LoomkL file containing an explore configuration that would use the final datamart from dbt as a source to power Looker.
- 4.The raw data folder containing the provided CSVs and JSON sample data for reference.
+## Overview  
+This repository contains the implementation of an **incremental data pipeline** for Air-Boltic using **dbt, Databricks, and Looker**.  
 
-**Please see the following context document (https://docs.google.com/document/d/1W04gBfo_bpGOIeDRofLLMP1Sk-_qe_6f2Auk6QofioI/edit?tab=t.0) for more information on the solution for both Part 1 and Part 2 as well as the ERD diagram.
-**
+## Repository Structure  
+The repo consists of the following components:  
+
+1. **dbt Core Project**  
+   - A `dbt` project configured with `dbt-databricks` to transform raw data into a structured **datamart**.  
+   - Implements **incremental models** with `merge_update_columns` for optimized data updates.  
+
+2. **Delta Table Script (`delta_tables_script.sql`)**  
+   - An example SQL script demonstrating how **Delta tables** would be created in **Databricks**.  
+   - Assumes a fictional **S3 storage location** for raw data ingestion.  
+
+3. **LookML Configuration**  
+   - Defines an **Explore** that connects Looker to the **final datamart** in dbt.  
+   - Includes measures such as:  
+     - `trip_duration_hours`: Sum of total trip duration.  
+     - `seat_utilization_percentage`: Percentage of occupied seats per trip.  
+
+4. **Raw Data Folder**  
+   - Contains the provided CSV and JSON **sample data** used for development and testing.  
+
+## Additional Resources  
+For a deeper understanding of the solution architecture and implementation details, refer to the **context document**:  
+[Solution Documentation & ERD](https://docs.google.com/document/d/1W04gBfo_bpGOIeDRofLLMP1Sk-_qe_6f2Auk6QofioI/edit?tab=t.0)  
