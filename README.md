@@ -17,8 +17,6 @@ The repo consists of the following components:
 3. **LookML Configuration**  
    - Defines an **Explore** that connects Looker to the **final datamart** in dbt.  
 
-4. **Raw Data Folder**  
-   - Contains the provided CSV and JSON **sample data** used for development and testing.  
 
 ## Additional Resources  
 For a deeper understanding of the solution architecture and implementation details, refer to the **context document**:  
