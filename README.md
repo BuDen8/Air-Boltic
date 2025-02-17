@@ -10,7 +10,7 @@ The repo consists of the following components:
    - A `dbt` project configured with `dbt-databricks` to transform raw data into a structured **datamart**.  
    - Implements **incremental models** with `merge_update_columns` for optimized data updates.  
 
-2. **Delta Table Script (`delta_tables_script.sql`)**  
+2. **ERD Delta Table Script (`delta_tables_script.sql`)**  
    - An example SQL script demonstrating how **Delta tables** would be created in **Databricks**.  
    - Assumes a fictional **S3 storage location** for raw data ingestion.  
 
